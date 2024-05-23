@@ -26,25 +26,20 @@
             if (employee != null)
             {
                 OpenStreamWriterToFile();
-                if (_streamWriter != null)
-                {
-                    _streamWriter.WriteLine($"{employee.Name},{employee.Surname},{employee.ID},{employee.WorkingSince}");
-                    _streamWriter.Close();
-                }
+                _streamWriter.WriteLine($"{employee.Name},{employee.Surname},{employee.ID},{employee.WorkingSince}");
+                _streamWriter.Close();
             }
         }
 
         public void WriteStaffToFile(List<Employee> staff)
         {
             OpenStreamWriterToFile();
-            if (_streamWriter != null)
+
+            foreach (Employee employee in staff)
             {
-                foreach (Employee employee in staff)
-                {
-                    _streamWriter.WriteLine($"{employee.Name},{employee.Surname},{employee.ID},{employee.WorkingSince}");
-                }
-                _streamWriter.Close();
+                _streamWriter.WriteLine($"{employee.Name},{employee.Surname},{employee.ID},{employee.WorkingSince}");
             }
+            _streamWriter.Close();
         }
 
         public List<Employee> ReadStaffList()

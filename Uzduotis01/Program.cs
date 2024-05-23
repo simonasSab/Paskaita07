@@ -19,7 +19,7 @@
             {
                 company.Staff = fileManager.ReadStaffList();
             }
-            catch
+            catch (IOException e)
             {
                 // If file does not exist, create empty file
                 fileManager.WriteStaffToFile(company.Staff);
