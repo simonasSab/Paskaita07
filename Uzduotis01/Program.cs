@@ -93,7 +93,7 @@
             }
             while (name == null);
 
-            // Get name
+            // Get surname
             string? surname;
             do
             {
