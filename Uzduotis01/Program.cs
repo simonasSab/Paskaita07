@@ -15,7 +15,15 @@
         public static void Main(string[] args)
         {
             // Loading file to Staff list at startup
-            company.Staff = fileManager.ReadStaffList();
+            try
+            {
+                company.Staff = fileManager.ReadStaffList();
+            }
+            catch
+            {
+                // If file does not exist, create empty file
+                fileManager.WriteStaffToFile(company.Staff);
+            }
             Console.WriteLine($"Hello! Loaded {company.Staff.Count} employees.\n");
 
             MainMenu();
