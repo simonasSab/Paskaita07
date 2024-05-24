@@ -54,12 +54,10 @@
                     Console.WriteLine($"Saving employees and quitting.");
                     return;
                 case 1: // Hire employee
-                    Employee? newEmployee = NewEmployee();
-                    company.HireEmployee(newEmployee);
+                    company.HireEmployee(NewEmployee());
                     break;
                 case 2: // Hire robot
-                    Employee newRobot = NewEmployee(true);
-                    company.HireEmployee(newRobot);
+                    company.HireEmployee(NewEmployee(true));
                     break;
                 case 3: // Fire employee
                     company.DisplayAllEmployees();
