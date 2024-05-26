@@ -38,11 +38,11 @@
             bool isInt;
             do
             {
-                Console.WriteLine("1.Hire employee" +
-                                "\n2.Hire robot" +
-                                "\n3.Fire employee" +
-                                "\n4.Display all employees" +
-                                "\n           0. Save and quit.\n");
+                Console.WriteLine("1. Hire employee" +
+                                "\n2. Hire robot" +
+                                "\n3. Fire employee" +
+                                "\n4. Display all employees" +
+                                "\n\n0. Save and quit.\n");
                 isInt = int.TryParse(Console.ReadLine(), out selection);
                 Console.WriteLine();
             }
